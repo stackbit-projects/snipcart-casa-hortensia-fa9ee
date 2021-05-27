@@ -1,7 +1,6 @@
 title: Planty
 baseurl: /
 permalink: '/:title/'
-snipcart_api_key: 'NTA5NWU3ZTUtZWRhMC00MjM5LTgyNWQtMWE3NjA3NmI3YWJmNjM3NTc3MjE3MTgzNDUzMTIz'
 plugins:
   - jekyll-menus
 collections:
