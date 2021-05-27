@@ -1,0 +1,35 @@
+---
+label: Promotion
+hide_body: true
+fields:
+- type: text
+  name: section_id
+  label: Section ID
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: subtitle
+  label: subtitle
+- type: file
+  name: image
+  label: Image
+- type: file
+  name: background_image
+  label: Background Image
+- type: field_group
+  name: cta
+  label: Call to action
+  fields:
+  - type: include
+    name: include_action
+    label: Action
+    template: action
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: promotion_section
+  config:
+    required: true

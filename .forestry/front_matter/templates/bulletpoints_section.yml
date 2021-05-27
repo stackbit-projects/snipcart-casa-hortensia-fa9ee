@@ -1,0 +1,35 @@
+---
+label: Bulletpoints Section
+hide_body: true
+fields:
+- type: text
+  name: section_id
+  label: Section ID
+- type: field_group_list
+  name: bulletpoints
+  label: Bulletpoints
+  description: List of bulletpoints to show on About page
+  fields:
+  - type: text
+    name: title
+    label: Title
+  - type: textarea
+    name: description
+    label: Description
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: file
+    name: image
+    label: Bulletpoint image
+  config:
+    labelField: title
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: bulletpoints_section
+  config:
+    required: true

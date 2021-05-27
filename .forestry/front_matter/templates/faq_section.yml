@@ -1,0 +1,32 @@
+---
+label: FAQ Section
+hide_body: true
+fields:
+- type: text
+  name: section_id
+  label: Section ID
+- type: field_group_list
+  name: questions
+  label: Questions
+  description: List of questions to show on the FAQ page
+  fields:
+  - type: text
+    name: question
+    label: Question
+  - type: textarea
+    name: answer
+    label: Answer
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  config:
+    labelField: question
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: faq_section
+  config:
+    required: true

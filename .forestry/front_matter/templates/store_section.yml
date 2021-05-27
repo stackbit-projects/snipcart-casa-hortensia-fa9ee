@@ -1,0 +1,15 @@
+---
+label: Store Section
+hide_body: true
+fields:
+- type: text
+  name: section_id
+  label: Section ID
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: store_section
+  config:
+    required: true

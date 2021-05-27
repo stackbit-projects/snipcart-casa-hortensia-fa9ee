@@ -1,0 +1,48 @@
+---
+label: Store
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+  description: The title of the page
+  config:
+    required: true
+- type: text
+  name: page_css_class
+  label: Page CSS class
+- type: boolean
+  name: white_header
+  label: White header
+- type: blocks
+  name: sections
+  label: Sections
+  description: Page sections
+  template_types:
+  - hero_section
+  - header_section
+  - featured_products_section
+  - featured_categories_section
+  - testimonials_section
+  - promotion_section
+  - store_section
+  - faq_section
+  - bulletpoints_section
+  - contact_section
+- type: field_group
+  name: seo
+  label: Seo
+  fields:
+  - type: include
+    name: include_stackbit_page_meta
+    label: Page meta data
+    template: stackbit_page_meta
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: store
+  config:
+    required: true
+pages:
+- store.md

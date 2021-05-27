@@ -1,0 +1,76 @@
+---
+label: Site Configuration
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Site title
+  config:
+    required: true
+- type: text
+  name: domain
+  label: Domain
+  description: 'The domain of your site, including the protocol, e.g. https://mysite.com/'
+- type: select
+  name: palette
+  label: Color Palette
+  default: green
+  config:
+    required: true
+    source:
+      type: custom
+    options:
+    - cyan
+    - green
+    - yellow
+- type: text
+  name: snipcart_api_key
+  label: Snipcart public API key
+  config:
+    required: true
+- type: file
+  name: favicon
+  label: Favicon
+- type: file
+  name: logo_light
+  label: Logo Light
+  config:
+    required: true
+- type: file
+  name: logo_dark
+  label: Logo Dark
+  config:
+    required: true
+- type: file
+  name: hamburger_background_image
+  label: Hamburger Menu Background Image
+- type: file
+  name: bg_image_primary
+  label: Product Left Background Image
+- type: number
+  name: bg_image_primary_opacity
+  label: Product Left Background Image Opacity
+  description: An integer between 0 and 100. A lower value makes the image more transparent
+- type: file
+  name: bg_image_secondary
+  label: Product Right Background Image
+- type: file
+  name: bg_image_product
+  label: Product Nav Background Image
+- type: field_group_list
+  name: main_menu
+  label: Navigation Links
+  description: List of navigation links
+  fields:
+  - type: include
+    name: include_action
+    label: Action
+    template: action
+  config:
+    labelField: title
+- type: text
+  name: footer_text
+  label: Footer Text
+pages:
+- _data/config.json

@@ -1,0 +1,38 @@
+---
+label: Testimonials
+hide_body: true
+fields:
+- type: text
+  name: section_id
+  label: Section ID
+- type: text
+  name: title
+  label: Title
+- type: field_group_list
+  name: testimonials
+  label: Testimonials
+  description: A list of testimonials
+  fields:
+  - type: text
+    name: text
+    label: Text
+  - type: field_group
+    name: author
+    label: Author
+    fields:
+    - type: text
+      name: name
+      label: Name
+    - type: text
+      name: location
+      label: Location
+  config:
+    labelField: text
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: testimonials_section
+  config:
+    required: true

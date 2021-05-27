@@ -1,0 +1,62 @@
+---
+label: Product
+hide_body: false
+fields:
+- type: text
+  name: id
+  label: ID
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: description
+  label: Description
+- type: text
+  name: price
+  label: Price
+- type: number
+  name: order
+  label: Order
+  description: numerical order of sorting products
+- type: file
+  name: default_thumbnail_image
+  label: Default Thumbnail Image
+- type: file
+  name: default_original_image
+  label: Default Original Image
+- type: select
+  name: category
+  label: Category
+  config:
+    source:
+      type: pages
+      section: pages
+- type: boolean
+  name: featured
+  label: Featured
+  default: false
+- type: field_group
+  name: seo
+  label: Seo
+  fields:
+  - type: include
+    name: include_stackbit_page_meta
+    label: Page meta data
+    template: stackbit_page_meta
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: product
+  config:
+    required: true
+pages:
+- products/plant1.md
+- products/plant2.md
+- products/plant3.md
+- products/plant4.md
+- products/plant5.md
+- products/plant6.md
+- products/plant7.md
+- products/plant8.md
+- products/plant9.md

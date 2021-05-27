@@ -1,0 +1,41 @@
+---
+label: Hero Section
+hide_body: true
+fields:
+- type: text
+  name: section_id
+  label: Section ID
+- type: file
+  name: background_image
+  label: Background Image
+  description: The image shown in the background of the section.
+- type: number
+  name: background_image_opacity
+  label: Background image opacity
+  description: An integer between 0 and 100. A lower value makes the image more transparent
+- type: textarea
+  name: content
+  label: Content
+  description: The text content of the section.
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: field_group_list
+  name: actions
+  label: Action Buttons
+  fields:
+  - type: include
+    name: include_action
+    label: Action
+    template: action
+  config:
+    labelField: title
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: hero_section
+  config:
+    required: true

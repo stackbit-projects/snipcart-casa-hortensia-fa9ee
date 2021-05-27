@@ -1,0 +1,32 @@
+---
+label: Featured Products Section
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: section_id
+  label: Section ID
+- type: boolean
+  name: light_title
+  label: Light title
+- type: boolean
+  name: icon
+  label: Show Heart Icon
+- type: list
+  name: featured_products
+  label: Featured Products
+  config:
+    use_select: true
+    source:
+      type: pages
+      section: pages
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: featured_products_section
+  config:
+    required: true

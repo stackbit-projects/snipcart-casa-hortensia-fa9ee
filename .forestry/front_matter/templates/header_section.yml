@@ -1,0 +1,28 @@
+---
+label: Header section
+hide_body: true
+fields:
+- type: text
+  name: section_id
+  label: Section ID
+- type: file
+  name: background_image
+  label: Background image
+- type: text
+  name: headline
+  label: Headline
+- type: textarea
+  name: subtitle
+  label: Subtitle
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: header_section
+  config:
+    required: true
